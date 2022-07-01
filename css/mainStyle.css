@@ -1,0 +1,1120 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --mainColor: #10cab7;
+    --secColor: #2c4755;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Work Sans', 'sans-serif';
+}
+
+/* Start Header Style */
+
+header {
+    padding: 10px 200px;
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 78667865787;
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    width: 100px;
+    height: 40px;
+}
+
+.bars {
+    position: relative;
+    transition: 0.3s;
+}
+
+.bars i {
+    font-size: 30px;
+    color: #333;
+}
+
+.links {
+    position: absolute;
+    top: calc(100% + 30px);
+    right: 0px;
+    background-color: #eee;
+    padding: 18px;
+    border-radius: 5px;
+    transition: 0.8s;
+    width: 180px;
+    display: none;
+}
+
+.links::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #eee transparent;
+    position: absolute;
+    top: -20px;
+    right: 5px;
+    z-index: 99999;
+
+}
+
+.links a {
+    display: block;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #333;
+    transition: 0.3s;
+    padding-bottom: 12px;
+    font-size: 18px;
+}
+
+.links a:hover {
+    padding-left: 15px;
+}
+
+.links a[href="#contact"] {
+    margin-bottom: 0px;
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+
+.bars:hover .links {
+    display: block;
+}
+
+/* End Header Style */
+
+/* Start landing section */
+
+section {
+    padding: 0px 200px;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.landing {
+    background-image: url("../images/landing.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landing h2 {
+    color: var(--mainColor);
+    font-size: 3em;
+}
+
+.landing p {
+    color: #222;
+    font-size: 1.5em;
+    margin-bottom: 8px;
+    letter-spacing: 0.8px;
+}
+
+/* End landing section */
+
+/* Start Features section */
+
+.features {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #eee;
+}
+
+.feat {
+    box-shadow: 1px 1px 10px 3px #bbb;
+    background-color: white;
+    width: 320px;
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+}
+
+.feat i {
+    margin: 12px 0px;
+    font-size: 48px;
+    color: var(--mainColor);
+}
+
+.feat h3 {
+    font-size: 28px;
+    color: var(--mainColor);
+}
+
+.feat {
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    color: #333;
+}
+
+/* End Features section */
+
+/* Start Services section */
+
+
+.services h1 {
+    font-size: 6em;
+    color: #bbb;
+    text-align: center;
+}
+
+.services>p {
+    font-size: 24px;
+    margin-top: -95px;
+    text-align: center;
+    margin-bottom: 4em;
+    color: #333;
+}
+
+.flex-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.flex-cards .cards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-cards .cards .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 32px;
+    margin-bottom: 3em;
+    width: 350px;
+    height: fit-content;
+}
+
+.flex-cards .cards .card i {
+    color: var(--mainColor);
+    font-size: 3em;
+}
+
+.flex-cards .cards .card h3 {
+    font-size: 1.5em;
+}
+
+.flex-cards .cards .card p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.flex-cards .img {
+    text-align: center;
+    position: relative;
+}
+
+.flex-cards .img img {
+    height: 400px;
+
+}
+
+.img::after {
+    content: "";
+    position: absolute;
+    background-color: var(--secColor);
+    width: 80px;
+    height: calc(100% + 40px);
+    top: -20px;
+    right: -20px;
+    z-index: -1;
+}
+
+/* End Services section */
+
+/* Start Portfolio section */
+
+.portfolio {
+    background-color: #eee;
+}
+
+.portfolio h1 {
+    font-size: 6em;
+    color: #bbb;
+    text-align: center;
+}
+
+.portfolio>p {
+    font-size: 22px;
+    margin-top: -100px;
+    text-align: center;
+    margin-bottom: 4em;
+    color: #333;
+}
+
+.portfolio-cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.portfolio-card {
+    width: 320px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.portfolio-card img {
+    width: 320px;
+    margin: 0px 0px 0px 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.portfolio-card h3 {
+    font-size: 22px;
+    padding-left: 8px;
+}
+
+.portfolio-card p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    letter-spacing: 1.6;
+    padding-left: 8px;
+}
+
+/* End Portfolio section */
+
+/* Start About section */
+
+.about h1 {
+    font-size: 6em;
+    color: #bbb;
+    text-align: center;
+}
+
+.about>p {
+    font-size: 22px;
+    margin-top: -100px;
+    text-align: center;
+    margin-bottom: 4em;
+    color: #333;
+}
+
+.about .contaner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-image img {
+    width: 300px;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image::before {
+    content: "";
+    position: absolute;
+    background-color: var(--mainColor);
+    width: 80px;
+    height: calc(100% + 40px);
+    top: -20px;
+    right: -20px;
+    z-index: -1;
+}
+
+
+.about-image::after {
+    content: "";
+    position: absolute;
+    background-color: var(--secColor);
+    width: 80px;
+    height: calc(100% + 40px);
+    top: -20px;
+    left: -20px;
+    z-index: -1;
+}
+
+.about .contaner p,
+hr {
+    width: 620px;
+
+}
+
+.about .contaner hr {
+    background-color: var(--mainColor);
+    height: 1px;
+    margin: 32px 0px;
+}
+
+.about .contaner p {
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 1.8;
+    color: #444;
+}
+
+
+/* End About section */
+
+
+/* Start Contact section */
+
+.contact {
+    background-color: #eee;
+}
+
+.contact h1 {
+    font-size: 6em;
+    color: #bbb;
+    text-align: center;
+}
+
+.contact>p {
+    font-size: 22px;
+    margin-top: -100px;
+    text-align: center;
+    margin-bottom: 4em;
+    color: #333;
+}
+
+.contact .contaner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .contaner p {
+    color: var(--secColor);
+    font-size: 36px;
+    margin-bottom: 32px;
+    font-weight: 700;
+}
+
+.contact .contaner a {
+    color: var(--mainColor);
+    text-decoration: none;
+    font-size: 42px;
+    font-weight: 900;
+    margin: 16px;
+}
+
+.contact .contaner p i {
+    display: inline-block;
+    font-size: 24px;
+    color: var(--secColor);
+    margin: 0px 6px;
+}
+
+.contact .contaner p :first-child {
+    margin-left: 16px;
+}
+
+/* End Contact section */
+
+/* Start Footer section */
+
+footer {
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    background-color: var(--secColor);
+}
+
+footer p {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+footer p span {
+    color: var(--mainColor);
+    font-weight: 700;
+}
+
+/* End Footer section */
+
+@media (max-width:640px) {
+    header {
+        padding: 8px 16px;
+    }
+
+    section {
+        padding: 0px 16px;
+    }
+
+    .landing h2 {
+        font-size: 2em;
+    }
+
+    .landing p {
+        font-size: 0.8em;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feat {
+        width: 300px;
+        height: 380px;
+        margin: 16px;
+    }
+
+    .services h1 {
+        font-size: 4em;
+    }
+
+    .services>p {
+        font-size: 14px;
+        margin-top: -65px;
+    }
+
+    .flex-cards .cards .card {
+        margin-left: 0px;
+        width: 300px;
+    }
+
+    .flex-cards .cards .card p {
+        text-align: center;
+    }
+
+    .flex-cards .img {
+        display: none;
+    }
+
+    .portfolio h1 {
+        font-size: 4em;
+    }
+
+    .portfolio>p {
+        font-size: 14px;
+        margin-top: -65px;
+    }
+
+    .portfolio-cards {
+        flex-direction: column;
+    }
+
+    .portfolio-card {
+        width: 300px;
+        margin: 8px;
+    }
+
+    .portfolio-card img {
+        width: 300px;
+    }
+
+    .portfolio-card p {
+        font-size: 14px;
+        line-height: 1.6;
+        letter-spacing: 1.4;
+    }
+
+    .about h1 {
+        font-size: 4em;
+    }
+
+    .about>p {
+        font-size: 14px;
+        margin-top: -65px;
+    }
+
+    .about .contaner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+
+    .about-image img {
+        width: 260px;
+    }
+
+    .about-image {
+        position: relative;
+        margin-bottom: 32px;
+    }
+
+    .about-image::before {
+        content: "";
+        width: 40px;
+        height: calc(100% + 20px);
+        top: -10px;
+        right: -10px;
+    }
+
+
+    .about-image::after {
+        content: "";
+        width: 40px;
+        height: calc(100% + 20px);
+        top: -10px;
+        right: -10px;
+    }
+
+    .about .contaner p,
+    hr {
+        width: 300px;
+
+    }
+
+    .about .contaner p {
+        font-size: 12px;
+        line-height: 1.4;
+        letter-spacing: 1.4;
+    }
+    .contact h1 {
+        font-size: 4em;
+    }
+    
+    .contact>p {
+        font-size: 14px;
+        margin-top: -65px;
+    }
+
+    .contact .contaner p {
+        font-size:14px;
+        margin-bottom: 26px;
+    }
+    
+    .contact .contaner a {
+        font-size: 26px;
+    }
+    
+    .contact .contaner p i {
+        display: inline-block;
+        font-size: 16px;
+        color: var(--secColor);
+        margin: 0px 6px;
+    }
+    
+    .contact .contaner p :first-child {
+        margin-left:8px;
+    }
+    
+    /* End Contact section */
+    
+    /* Start Footer section */
+    
+    footer {
+        padding: 8px;
+        text-align: center;
+        width: 100%;
+        color: #fff;
+        background-color: var(--secColor);
+    }
+    
+    footer p {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 1007px) {
+    
+    header {
+        padding: 8px 16px;
+    }
+
+    section {
+        padding: 0px 16px;
+    }
+
+    .landing h2 {
+        font-size: 2em;
+    }
+
+    .landing p {
+        font-size: 0.8em;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feat {
+        width: 300px;
+        height: 380px;
+        margin: 16px;
+    }
+
+    .services h1 {
+        font-size: 4em;
+    }
+
+    .services>p {
+        font-size: 14px;
+        margin-top: -65px;
+    }
+
+    .flex-cards .cards .card {
+        margin-left: 0px;
+        width: 280px;
+        margin-left: 20px;
+    }
+
+    .flex-cards .cards .card p {
+        text-align: center;
+    }
+
+    .flex-cards .img {
+        display: none;
+    }
+
+    .portfolio h1 {
+        font-size: 4em;
+    }
+
+    .portfolio>p {
+        font-size: 14px;
+        margin-top: -65px;
+    }
+
+    .portfolio-cards {
+        flex-direction: column;
+    }
+
+    .portfolio-card {
+        width: 300px;
+        margin: 8px;
+    }
+
+    .portfolio-card img {
+        width: 300px;
+    }
+
+    .portfolio-card p {
+        font-size: 14px;
+        line-height: 1.6;
+        letter-spacing: 1.4;
+    }
+
+    .about h1 {
+        font-size: 4em;
+    }
+
+    .about>p {
+        font-size: 14px;
+        margin-top: -65px;
+    }
+
+    .about .contaner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+
+    .about-image img {
+        width: 260px;
+    }
+
+    .about-image {
+        position: relative;
+        margin-bottom: 32px;
+    }
+
+    .about-image::before {
+        content: "";
+        width: 40px;
+        height: calc(100% + 20px);
+        top: -10px;
+        right: -10px;
+    }
+
+
+    .about-image::after {
+        content: "";
+        width: 40px;
+        height: calc(100% + 20px);
+        top: -10px;
+        right: -10px;
+    }
+
+    .about .contaner p,
+    hr {
+        width: 300px;
+
+    }
+
+    .about .contaner p {
+        font-size: 12px;
+        line-height: 1.4;
+        letter-spacing: 1.4;
+    }
+    .contact h1 {
+        font-size: 4em;
+    }
+    
+    .contact>p {
+        font-size: 14px;
+        margin-top: -65px;
+    }
+
+    .contact .contaner p {
+        font-size:14px;
+        margin-bottom: 26px;
+    }
+    
+    .contact .contaner a {
+        font-size: 26px;
+    }
+    
+    .contact .contaner p i {
+        display: inline-block;
+        font-size: 16px;
+        color: var(--secColor);
+        margin: 0px 6px;
+    }
+    
+    .contact .contaner p :first-child {
+        margin-left:8px;
+    }
+    
+    /* End Contact section */
+    
+    /* Start Footer section */
+    
+    footer {
+        padding: 8px;
+        text-align: center;
+        width: 100%;
+        color: #fff;
+        background-color: var(--secColor);
+    }
+    
+    footer p {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 1200px) {
+    
+    header {
+        padding: 8px 16px;
+    }
+
+    section {
+        padding: 0px 16px;
+    }
+
+    .landing h2 {
+        font-size: 2em;
+    }
+
+    .landing p {
+        font-size: 0.8em;
+    }
+
+    .features {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .feat {
+        width: 300px;
+        height: 380px;
+        margin: 16px;
+    }
+
+    .services h1 {
+        font-size: 4em;
+    }
+
+    .services>p {
+        font-size: 14px;
+        margin-top: -65px;
+    }
+
+    .flex-cards .cards {
+        justify-content: space-evenly;
+    }
+
+    .flex-cards .cards .card {
+        margin-left: 0px;
+        width: 280px;
+        margin-left: 20px;
+    }
+
+    .flex-cards .cards .card p {
+        text-align: center;
+    }
+
+    .flex-cards .img {
+        display: none;
+    }
+
+    .portfolio h1 {
+        font-size: 4em;
+    }
+
+    .portfolio>p {
+        font-size: 14px;
+        margin-top: -65px;
+    }
+
+    .portfolio-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-card {
+        width: 300px;
+        margin: 8px;
+    }
+
+    .portfolio-card img {
+        width: 300px;
+    }
+
+    .portfolio-card p {
+        font-size: 14px;
+        line-height: 1.6;
+        letter-spacing: 1.4;
+    }
+
+    .about h1 {
+        font-size: 4em;
+    }
+
+    .about>p {
+        font-size: 14px;
+        margin-top: -65px;
+    }
+
+    .about .contaner {
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    .about-image img {
+        width: 260px;
+    }
+
+    .about-image {
+        position: relative;
+        margin-bottom: 32px;
+    }
+
+    .about-image::before {
+        content: "";
+        width: 40px;
+        height: calc(100% + 20px);
+        top: -10px;
+        right: -10px;
+    }
+
+
+    .about-image::after {
+        content: "";
+        width: 40px;
+        height: calc(100% + 20px);
+        top: -10px;
+        right: -10px;
+    }
+
+    .about .contaner p,
+    hr {
+        width: 300px;
+
+    }
+
+    .about .contaner p {
+        font-size: 12px;
+        line-height: 1.4;
+        letter-spacing: 1.4;
+    }
+    .contact h1 {
+        font-size: 4em;
+    }
+    
+    .contact>p {
+        font-size: 14px;
+        margin-top: -65px;
+    }
+
+    .contact .contaner p {
+        font-size:14px;
+        margin-bottom: 26px;
+    }
+    
+    .contact .contaner a {
+        font-size: 26px;
+    }
+    
+    .contact .contaner p i {
+        display: inline-block;
+        font-size: 16px;
+        color: var(--secColor);
+        margin: 0px 6px;
+    }
+    
+    .contact .contaner p :first-child {
+        margin-left:8px;
+    }
+    
+    /* End Contact section */
+    
+    /* Start Footer section */
+    
+    footer {
+        padding: 8px;
+        text-align: center;
+        width: 100%;
+        color: #fff;
+        background-color: var(--secColor);
+    }
+    
+    footer p {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* Start Features section */
+    .feat {
+        width: 320px;
+        margin-left: 16px;
+    }
+    
+    /* End Features section */
+    
+    /* Start Portfolio section */
+    .portfolio-card {
+        margin-left: 16px;
+    }
+    /* End Portfolio section */
+    
+    /* Start About section */
+    .about .contaner p,
+    hr {
+        width:fit-content;
+        margin-left: 100px;
+    
+    }
+    
+    .about .contaner hr {
+        background-color: var(--mainColor);
+        height: 1px;
+        margin: 32px 0px;
+    }
+    
+    .about .contaner p {
+        font-size: 18px;
+        line-height: 1.8;
+        letter-spacing: 1.8;
+        color: #444;
+    }
+    
+    
+    /* End About section */
+    
+    
+    /* Start Contact section */
+    
+    .contact {
+        background-color: #eee;
+    }
+    
+    .contact h1 {
+        font-size: 6em;
+        color: #bbb;
+        text-align: center;
+    }
+    
+    .contact>p {
+        font-size: 22px;
+        margin-top: -100px;
+        text-align: center;
+        margin-bottom: 4em;
+        color: #333;
+    }
+    
+    .contact .contaner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .contact .contaner p {
+        color: var(--secColor);
+        font-size: 36px;
+        margin-bottom: 32px;
+        font-weight: 700;
+    }
+    
+    .contact .contaner a {
+        color: var(--mainColor);
+        text-decoration: none;
+        font-size: 42px;
+        font-weight: 900;
+        margin: 16px;
+    }
+    
+    .contact .contaner p i {
+        display: inline-block;
+        font-size: 24px;
+        color: var(--secColor);
+        margin: 0px 6px;
+    }
+    
+    .contact .contaner p :first-child {
+        margin-left: 16px;
+    }
+    
+    /* End Contact section */
+    
+    /* Start Footer section */
+    
+    footer {
+        padding: 8px;
+        text-align: center;
+        width: 100%;
+        color: #fff;
+        background-color: var(--secColor);
+    }
+    
+    footer p {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    
+    footer p span {
+        color: var(--mainColor);
+        font-weight: 700;
+    }
+    
+    /* End Footer section */
+}
